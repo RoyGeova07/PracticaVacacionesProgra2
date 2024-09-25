@@ -24,7 +24,7 @@ public class Recursividad {
 
 //                                          al volver:
 //                                          sumatoriaUP(1) = 0 + 1 = 1
-//                                          sumatoriaUP(2) = 1 + 2 = 3
+//                -                          sumatoriaUP(2) = 1 + 2 = 3
 //                                          sumatoriaUP(3) = 3 + 3 = 6
 //                                          sumatoriaUP(4) = 6 + 4 = 10
 //                                          sumatoriaUP(5) = 10 + 5 = 15                                                                  
