@@ -107,7 +107,7 @@ public class Recursividad {
 
     public static void main(String[] args) {
         Scanner lea = new Scanner(System.in);
-        boolean entradaValida = false;
+        boolean entradaValida;
         int resultado1 = sumatoriaUP(5);
         int resultado2 = sumatoriaDOWN(4, 0);
         String palabra = "";
@@ -115,7 +115,7 @@ public class Recursividad {
         int continuar = 0;
 
         do {
-
+            entradaValida = false;
             while (!entradaValida) {
 
                 System.out.println("\nIngrese una palabra: ");
@@ -167,6 +167,7 @@ public class Recursividad {
             piramide(1, base);
 
             System.out.println("Quiere intentar de nuevo? (si presione): 1) (no presione): 2)");
+            continuar = lea.nextInt();
 
         } while (continuar == 1);
 
