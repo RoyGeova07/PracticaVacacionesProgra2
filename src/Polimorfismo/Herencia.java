@@ -15,6 +15,24 @@ public class Herencia {
      */
     public static void main(String[] args) {
         
+       // array donde podemos guardar, consultores, jefes, empleados
+       // ejemplo de polimorfismo
+       Persona array[] = new Persona [5];
+       
+       array[0] = new Persona();
+       array[1] = new Consultor();
+       array[2] = new Empleado();
+       array[3] = new Jefe();
+       
+       Persona person = new Persona();
+       Consultor consul = new Consultor();
+       
+       person = consul; // bueno
+       // consul = person // malo
+       
+       
+        
+        
         
         
     }
