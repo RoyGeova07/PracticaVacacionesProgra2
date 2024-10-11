@@ -16,9 +16,9 @@ public class Persona {
     
     // se utiliza protected porque ya no seran privados para las demas clases si no que ahora se podra
     // acceder desde las clases donde se hereda, clases hijas
-    private String nombre;
-    private String apellido;
-    private  int Edad;
+    protected String nombre;
+    protected String apellido;
+    protected  int Edad;
 
     public Persona(String nombre, String apellido, int Edad) {
         this.nombre = nombre;
