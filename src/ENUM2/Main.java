@@ -16,8 +16,8 @@ public class Main {
     public static void main(String[] args) {
         // values me devuelve un array, con los continentes enumerados
         Continente[] continentes = Continente.values();
-        for (int i = 0; i < continentes.length; i++) {
-            System.out.println(continentes[i].NombreyDensidadPoblacional());
+        for (Continente continente : continentes) {
+            System.out.println(continente.NombreyDensidadPoblacional());
         }
         
     }
