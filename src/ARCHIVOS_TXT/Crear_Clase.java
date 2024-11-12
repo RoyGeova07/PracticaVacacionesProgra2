@@ -58,13 +58,19 @@ public class Crear_Clase {
         }
     }
     
-    public boolean agregarArchivoAunFolder(String nombreArchivo,String rutaCarpeta) throws IOException{
+    public boolean agregarArchivoOUnaCarpetaAunFolder(String nombre,String rutaCarpeta, boolean esFolder) throws IOException{
         File carpeta=new File(rutaCarpeta);
         
         if(carpeta.exists()&& carpeta.isDirectory()){
+            File nuevoElemento=new File (carpeta, nombre);
             
-            File nuevoArchivo=new File (carpeta, nombreArchivo);
-            return nuevoArchivo.createNewFile();
+            if(esFolder){
+                return nuevoElemento.mkdirs();
+            }else{
+                return nuevoElemento.createNewFile(); 
+            }
+            
+            
         }
         System.out.println("La ruta no es un directorio o no ha sudo establecida");
         return false;

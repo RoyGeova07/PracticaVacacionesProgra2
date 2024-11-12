@@ -73,19 +73,28 @@ public class CREAR_ARCHIVOS_Y_CARPETAS {
                 }
 
             } else if (opcion == 5) {
-                System.out.println("Ingrese el nombre del archivo a Agregar");
+                System.out.println("Ingrese el nombre del archivo o carpeta a agregar");
                 nombreArchivoAgregar = lea.next();
                 System.out.println("Ingrese el nombre de la carpeta");
                 String carpeta = lea.next();
+                
+                System.out.println("Desea agregar un archivo (1) o una carpeta (2)?");
+                int tipoElemento=lea.nextInt();
+                
+                boolean esFolder=(tipoElemento==2);//aqui si es 2, se tratara como carpeta
 
                 try {
 
-                    if (archi.agregarArchivoAunFolder(nombreArchivoAgregar, carpeta)) {
-                        System.out.println("Archivo " + nombreArchivoAgregar + "agregado al folder");
+                    if (archi.agregarArchivoOUnaCarpetaAunFolder(nombreArchivoAgregar, carpeta,esFolder)) {
+                        if(esFolder){
+                            System.out.println("Carpeta "+nombreArchivoAgregar+ " agregado al folder "+carpeta);
+                        }else{
+                            System.out.println("Archivo "+nombreArchivoAgregar+ " agregado al folder "+carpeta);
+                        }
                     }
 
                 } catch (IOException e) {
-                    System.out.println("ERROR AL AGREGAR EL ARCHIVO: " + e.getMessage());
+                    System.out.println("ERROR AL AGREGAR EL ARCHIVO O CARPETA: " + e.getMessage());
                 }
 
             } else if (opcion == 6) {
