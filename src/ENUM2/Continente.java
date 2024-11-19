@@ -10,7 +10,7 @@ package ENUM2;
  */
 public enum Continente {
     
-    //datos del 2008 xd
+    //datos del 2008 xddd
     AMERICA(910000000, 42330000),
     EUROPA(731000000, 10180000),
     AFRICA(922011000, 30370000),
